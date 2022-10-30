@@ -6,14 +6,14 @@ import depositVault from "../public/deposit-vault.svg";
 import follow from "../public/follow.svg";
 import referral from "../public/referral.svg";
 import hatItem from "../public/hat-item.svg";
-import pickAxe from "../public/pickaxe.svg"
-import money from "../public/money.svg"
+import pickAxe from "../public/pickaxe.svg";
+import money from "../public/money.svg";
 
 export default function Quest({ activeTab, setActiveTab }: any) {
   return (
     <div className="flex flex-col justify-between bg-[#19173D] h-[520px] w-full absolute bottom-0 rounded-3xl">
       <div className="flex justify-center text-center mx-4 mt-5">
-        <p className="text-3xl font-bold">Quests</p>
+        <p className="text-3xl font-bold text-white">Quests</p>
       </div>
       <motion.button
         whileTap={{ scale: 0.95 }}
@@ -80,10 +80,7 @@ export default function Quest({ activeTab, setActiveTab }: any) {
         >
           <Image src={money} width={30} height={30} alt="next" />
         </motion.button>
-
       </div>
-
     </div>
   );
-
 }

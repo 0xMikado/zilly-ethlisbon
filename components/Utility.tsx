@@ -8,14 +8,14 @@ import bodyItem from "../public/body-item.svg";
 import hoodieItem from "../public/hoodie-item.svg";
 import teeShirtItem from "../public/tee-shirt-item.svg";
 import hatItem from "../public/hat-item.svg";
-import pickAxe from "../public/pickaxe.svg"
-import money from "../public/money.svg"
+import pickAxe from "../public/pickaxe.svg";
+import money from "../public/money.svg";
 
 export default function Utility({ activeTab, setActiveTab }: any) {
   return (
-    <div className="flex flex-col justify-between bg-[#19173D] h-[520px] w-full absolute bottom-0 rounded-3xl">
+    <div className="flex flex-col text-white justify-between bg-[#19173D] h-[520px] w-full absolute bottom-0 rounded-3xl">
       <div className="flex justify-center text-center mx-4 mt-5">
-        <p className="text-3xl font-bold">Utility Shop</p>
+        <p className="text-3xl  font-bold">Utility Shop</p>
       </div>
       <motion.button
         whileTap={{ scale: 0.95 }}
@@ -57,7 +57,6 @@ export default function Utility({ activeTab, setActiveTab }: any) {
             <Image src={footItem} width={100} height={100} alt="next" />
           </motion.button>
         </div>
-
       </div>
       <div className="h-fit">
         <p className="text-left font-bold ml-4 mb-4">Buy some merch</p>
@@ -110,9 +109,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
         >
           <Image src={money} width={30} height={30} alt="next" />
         </motion.button>
-
       </div>
-
     </div>
   );
 }

@@ -74,11 +74,18 @@ function ZillyPopUp() {
           <Image src={coin} width={30} height={30} alt="coin" />
         </div>
       </div>
-      {activeTab <= 2 && <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />}
-      {activeTab === 3 && <Quest activeTab={activeTab} setActiveTab={setActiveTab} />}
-      {activeTab === 4 && <Utility activeTab={activeTab} setActiveTab={setActiveTab} />}
-      {activeTab === 5 && <HomeSmall activeTab={activeTab} setActiveTab={setActiveTab} />}
-
+      {activeTab <= 2 && (
+        <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />
+      )}
+      {activeTab === 3 && (
+        <Quest activeTab={activeTab} setActiveTab={setActiveTab} />
+      )}
+      {activeTab === 4 && (
+        <Utility activeTab={activeTab} setActiveTab={setActiveTab} />
+      )}
+      {activeTab === 5 && (
+        <HomeSmall activeTab={activeTab} setActiveTab={setActiveTab} />
+      )}
     </div>
   );
 }
@@ -87,12 +94,12 @@ async function mint() {
   const polygonSDK = TatumPolygonSDK({
     apiKey: "7de131bc-860e-41ad-8eb9-a14919407ee7",
   });
-  const txData = await polygonSDK.nft.mintNFT({
-    chain: "MATIC",
-    to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
-    url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
-  });
-  return txData;
+  // const txData = await polygonSDK.nft.mintNFT({
+  //   chain: "MATIC",
+  //   to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
+  //   url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
+  // });
+  // return txData;
 }
 
 function Welcome({ activeTab, setActiveTab }: any) {
@@ -102,7 +109,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
   if (activeTab === 0) {
     return (
       <div className="bg-[#19173D] h-[220px] w-full absolute bottom-0 rounded-3xl">
-        <div className="flex justify-center text-center mx-4 mt-6">
+        <div className="flex justify-center text-center text-white mx-4 mt-6">
           <p className="text-3xl font-bold">
             Welcome to your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#64159B] to-[#9C106C]">
@@ -127,7 +134,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
   if (activeTab === 1) {
     return (
       <div className="bg-[#19173D] h-[350px] w-full absolute bottom-0 rounded-3xl">
-        <div className="flex flex-col justify-center text-left mx-8 mt-8 space-y-8">
+        <div className="flex flex-col justify-center text-white text-left mx-8 mt-8 space-y-8">
           <div className="flex space-x-8 items-center">
             <Image
               src={num1}
@@ -188,11 +195,12 @@ function Welcome({ activeTab, setActiveTab }: any) {
             className=""
             onClick={() => {
               setMinting(1);
-              mint().then((res: any) => {
-                console.log("tx data", res);
-                setTx(res?.txId);
-                setMinting(2);
-              });
+              // mint().then((res: any) => {
+              //   console.log("tx data", res);
+              //   setTx(res?.txId);
+              //   setMinting(2);
+              // });
+              mint();
             }}
           >
             {minting === 0 && (
@@ -221,7 +229,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
         )}
         {minting === 2 && (
           <>
-            <div className="flex flex-col justify-center items-center mx-10 text-center space-y-4">
+            <div className="flex flex-col justify-center text-white items-center mx-10 text-center space-y-4">
               <p>{`Congrats on minting your membership card!`}</p>
               <a
                 href={`https://mumbai.polygonscan.com/tx/${tx}`}
