@@ -35,7 +35,7 @@ export default function Quest({ activeTab, setActiveTab }: any) {
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.05 }}
         type="button"
         className="w-fit h-fit mx-6"
         onClick={() => console.log("hello")}
@@ -44,7 +44,7 @@ export default function Quest({ activeTab, setActiveTab }: any) {
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.05 }}
         type="button"
         className="w-fit h-fit mx-6"
         onClick={() => console.log("hello")}
@@ -53,7 +53,7 @@ export default function Quest({ activeTab, setActiveTab }: any) {
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.05 }}
         type="button"
         className="w-fit h-fit mx-6"
         onClick={() => console.log("hello")}

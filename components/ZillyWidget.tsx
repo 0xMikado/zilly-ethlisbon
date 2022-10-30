@@ -74,8 +74,8 @@ function ZillyPopUp() {
         </div>
       </div>
       {activeTab <= 2 && <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />}
-      {activeTab === 3 && <Utility activeTab={activeTab} setActiveTab={setActiveTab} />}
-      {activeTab === 4 && <Quest activeTab={activeTab} setActiveTab={setActiveTab} />}
+      {activeTab === 3 && <Quest activeTab={activeTab} setActiveTab={setActiveTab} />}
+      {activeTab === 4 && <Utility activeTab={activeTab} setActiveTab={setActiveTab} />}
       {activeTab === 5 && <HomeSmall activeTab={activeTab} setActiveTab={setActiveTab} />}
 
     </div>

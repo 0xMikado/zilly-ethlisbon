@@ -31,7 +31,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
         <div className="flex justify-around space-x-2">
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className="ml-2"
             onClick={() => console.log("hello")}
@@ -40,7 +40,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className=""
             onClick={() => console.log("hello")}
@@ -49,7 +49,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className=""
             onClick={() => console.log("hello")}
@@ -64,7 +64,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
         <div className="flex justify-around space-x-2">
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className="ml-2"
             onClick={() => console.log("hello")}
@@ -73,7 +73,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className=""
             onClick={() => console.log("hello")}
@@ -82,7 +82,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             type="button"
             className=""
             onClick={() => console.log("hello")}
