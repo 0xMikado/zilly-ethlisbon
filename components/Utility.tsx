@@ -22,7 +22,7 @@ export default function Utility({ activeTab, setActiveTab }: any) {
         whileHover={{ scale: 1.1 }}
         type="button"
         className="absolute top-6 right-6"
-        onClick={() => console.log("hello")}
+        onClick={() => setActiveTab(5)}
       >
         <Image src={closeIcon} width={28} height={28} alt="next" />
       </motion.button>

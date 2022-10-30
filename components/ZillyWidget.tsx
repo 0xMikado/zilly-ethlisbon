@@ -15,6 +15,7 @@ import usePersistentState from "../hooks/usePersistentState";
 import { useRouter } from "next/router";
 import Utility from "./Utility";
 import Quest from "./Quest";
+import HomeSmall from "./HomeSmall";
 
 export default function ZillyWidget({ children }: any) {
   const [openModal, setOpenModal] = useState(false);
@@ -75,6 +76,7 @@ function ZillyPopUp() {
       {activeTab <= 2 && <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />}
       {activeTab === 3 && <Utility activeTab={activeTab} setActiveTab={setActiveTab} />}
       {activeTab === 4 && <Quest activeTab={activeTab} setActiveTab={setActiveTab} />}
+      {activeTab === 5 && <HomeSmall activeTab={activeTab} setActiveTab={setActiveTab} />}
 
     </div>
   );
