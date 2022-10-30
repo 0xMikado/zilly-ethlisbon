@@ -12,10 +12,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useAccount, useEnsName } from "wagmi";
 import usePersistentState from "../hooks/usePersistentState";
-import { TatumPolygonSDK } from "@tatumio/polygon";
 import Utility from "./Utility";
 import Quest from "./Quest";
 import HomeSmall from "./HomeSmall";
+// import { TatumPolygonSDK } from "@tatumio/polygon";
 
 export default function ZillyWidget({ children }: any) {
   const [openModal, setOpenModal] = useState(false);
@@ -94,17 +94,17 @@ function ZillyPopUp() {
   );
 }
 
-async function mint() {
-  const polygonSDK = TatumPolygonSDK({
-    apiKey: "7de131bc-860e-41ad-8eb9-a14919407ee7",
-  });
-  const txData = await polygonSDK.nft.mintNFT({
-    chain: "MATIC",
-    to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
-    url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
-  });
-  return txData;
-}
+// async function mint() {
+//   const polygonSDK = TatumPolygonSDK({
+//     apiKey: "7de131bc-860e-41ad-8eb9-a14919407ee7",
+//   });
+//   const txData = await polygonSDK.nft.mintNFT({
+//     chain: "MATIC",
+//     to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
+//     url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
+//   });
+//   return txData;
+// }
 
 function Welcome({ activeTab, setActiveTab }: any) {
   const [minting, setMinting] = useState<number>(0);
@@ -113,7 +113,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
   if (activeTab === 0) {
     return (
       <div className="bg-[#19173D] h-[220px] w-full absolute bottom-0 rounded-3xl">
-        <div className="flex justify-center text-center mx-4 mt-6">
+        <div className="flex justify-center text-center text-white mx-4 mt-6">
           <p className="text-3xl font-bold">
             Welcome to your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#64159B] to-[#9C106C]">
@@ -138,7 +138,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
   if (activeTab === 1) {
     return (
       <div className="bg-[#19173D] h-[350px] w-full absolute bottom-0 rounded-3xl">
-        <div className="flex flex-col justify-center text-left mx-8 mt-8 space-y-8">
+        <div className="flex flex-col justify-center text-white text-left mx-8 mt-8 space-y-8">
           <div className="flex space-x-8 items-center">
             <Image
               src={num1}
@@ -198,12 +198,12 @@ function Welcome({ activeTab, setActiveTab }: any) {
             type="button"
             className=""
             onClick={() => {
-              setMinting(1);
-              mint().then((res: any) => {
-                console.log("tx data", res);
-                setTx(res?.txId);
-                setMinting(2);
-              });
+              setMinting(2);
+              // mint().then((res: any) => {
+              //   console.log("tx data", res);
+              //   setTx(res?.txId);
+              //   setMinting(2);
+              // });
             }}
           >
             {minting === 0 && (
@@ -232,15 +232,16 @@ function Welcome({ activeTab, setActiveTab }: any) {
         )}
         {minting === 2 && (
           <>
-            <div className="flex flex-col justify-center items-center mx-10 text-center space-y-4">
-              <p>{`Congrats on minting your membership card!`}</p>
+            <div className="flex flex-col justify-center text-white items-center mx-10 text-center space-y-4">
+              <p>Gassless minting paused after the hackathon</p>
+              {/* <p>{`Congrats on minting your membership card!`}</p> */}
               <a
                 href={`https://mumbai.polygonscan.com/tx/${tx}`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-500 underline"
               >
-                See the transaction here
+                Check an example here
               </a>
             </div>
             <motion.button
@@ -248,7 +249,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
               whileHover={{ scale: 1.1 }}
               type="button"
               className="absolute bottom-6 right-6"
-              onClick={() => setActiveTab(5)}
+              onClick={() => setActiveTab(3)}
             >
               <Image src={nextIcon} width={40} height={40} alt="next" />
             </motion.button>
