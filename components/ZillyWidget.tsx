@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 import Utility from "./Utility";
 import Quest from "./Quest";
 import HomeSmall from "./HomeSmall";
-import { TatumPolygonSDK } from "@tatumio/polygon";
+// import { TatumPolygonSDK } from "@tatumio/polygon";
 
 export default function ZillyWidget({ children }: any) {
   const [openModal, setOpenModal] = useState(false);
@@ -90,17 +90,17 @@ function ZillyPopUp() {
   );
 }
 
-async function mint() {
-  const polygonSDK = TatumPolygonSDK({
-    apiKey: "7de131bc-860e-41ad-8eb9-a14919407ee7",
-  });
-  // const txData = await polygonSDK.nft.mintNFT({
-  //   chain: "MATIC",
-  //   to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
-  //   url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
-  // });
-  // return txData;
-}
+// async function mint() {
+//   const polygonSDK = TatumPolygonSDK({
+//     apiKey: "7de131bc-860e-41ad-8eb9-a14919407ee7",
+//   });
+//   const txData = await polygonSDK.nft.mintNFT({
+//     chain: "MATIC",
+//     to: "0x5d81AE293cBebdCD0fe57F62068bB763E56581AC",
+//     url: "ipfs://QmYzJNNZz2GpUeJdBTN18UT1ZRDJrr6MhcHi3uqDbWSCJS",
+//   });
+//   return txData;
+// }
 
 function Welcome({ activeTab, setActiveTab }: any) {
   const [minting, setMinting] = useState<number>(0);
@@ -194,13 +194,12 @@ function Welcome({ activeTab, setActiveTab }: any) {
             type="button"
             className=""
             onClick={() => {
-              setMinting(1);
+              setMinting(2);
               // mint().then((res: any) => {
               //   console.log("tx data", res);
               //   setTx(res?.txId);
               //   setMinting(2);
               // });
-              mint();
             }}
           >
             {minting === 0 && (
@@ -230,14 +229,15 @@ function Welcome({ activeTab, setActiveTab }: any) {
         {minting === 2 && (
           <>
             <div className="flex flex-col justify-center text-white items-center mx-10 text-center space-y-4">
-              <p>{`Congrats on minting your membership card!`}</p>
+              <p>Gassless minting paused after the hackathon</p>
+              {/* <p>{`Congrats on minting your membership card!`}</p> */}
               <a
                 href={`https://mumbai.polygonscan.com/tx/${tx}`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-500 underline"
               >
-                See the transaction here
+                Check an example here
               </a>
             </div>
             <motion.button
