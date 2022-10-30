@@ -12,6 +12,8 @@
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
     "@rainbow-me/rainbowkit": "^0.7.4",
+    "@tatumio/eth": "^2.0.1-alpha.341",
+    "@tatumio/polygon": "^2.0.1-alpha.341",
     "ethers": "^5.7.2",
     "framer-motion": "^7.6.2",
     "next": "13.0.0",
