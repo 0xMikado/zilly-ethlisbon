@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import closeIcon from "../public/close-button.svg";
+import seeAll from "../public/see-all-button.svg";
 import dailyStrike from "../public/daily-strike.svg";
 import depositVault from "../public/deposit-vault.svg";
 import follow from "../public/follow.svg";
@@ -13,16 +13,16 @@ export default function HomeSmall({ activeTab, setActiveTab }: any) {
   return (
     <div className="flex flex-col justify-between bg-[#19173D] h-[220px] w-full absolute bottom-0 rounded-3xl">
       <div className="flex justify-center text-center mx-4 mt-5">
-        <p className="text-3xl font-bold">Home</p>
+        <p className="text-3xl font-bold">Quests</p>
       </div>
       <motion.button
         whileTap={{ scale: 0.95 }}
         whileHover={{ scale: 1.1 }}
         type="button"
         className="absolute top-6 right-6"
-        onClick={() => console.log("hello")}
+        onClick={() => setActiveTab(3)}
       >
-        <Image src={closeIcon} width={28} height={28} alt="next" />
+        <Image src={seeAll} width={28} height={28} alt="next" />
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.95 }}

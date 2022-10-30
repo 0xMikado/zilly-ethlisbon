@@ -79,33 +79,14 @@ function ZillyPopUp() {
         <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />
       )}
       {activeTab === 3 && (
-        <Utility activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Quest activeTab={activeTab} setActiveTab={setActiveTab} />
       )}
       {activeTab === 4 && (
-        <Quest activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Utility activeTab={activeTab} setActiveTab={setActiveTab} />
       )}
       {activeTab === 5 && (
         <HomeSmall activeTab={activeTab} setActiveTab={setActiveTab} />
       )}
-    </div>
-  );
-}
-
-function Utility({ activeTab, setActiveTab }: any) {
-  return (
-    <div className="bg-[#19173D] h-[220px] w-full absolute bottom-0 rounded-3xl">
-      <div className="flex justify-center text-center mx-4 mt-6">
-        <p className="text-3xl font-bold">Utility</p>
-      </div>
-      <motion.button
-        whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.1 }}
-        type="button"
-        className="absolute bottom-6 right-6"
-        onClick={() => console.log("hello")}
-      >
-        <Image src={nextIcon} width={40} height={40} alt="next" />
-      </motion.button>
     </div>
   );
 }
