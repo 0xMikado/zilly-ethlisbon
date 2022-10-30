@@ -60,6 +60,7 @@ export default function Quest({ activeTab, setActiveTab }: any) {
       >
         <Image src={follow} width={300} height={100} alt="next" />
       </motion.button>
+
       <div className="flex justify-around mx-12 py-2 mb-4 rounded-full bg-[#19173D] border-[#383476] border-2">
         <motion.button
           whileTap={{ scale: 0.95 }}
