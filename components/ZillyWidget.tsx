@@ -8,12 +8,13 @@ import num1 from "../public/num1.svg";
 import num2 from "../public/num2.svg";
 import num3 from "../public/num3.svg";
 import ClaimButton from "../public/ClaimButton.svg";
-import button from "../public/button.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useAccount, useEnsName } from "wagmi";
 import usePersistentState from "../hooks/usePersistentState";
 import { useRouter } from "next/router";
+import Utility from "./Utility";
+import Quest from "./Quest";
 
 export default function ZillyWidget({ children }: any) {
   const [openModal, setOpenModal] = useState(false);
@@ -71,30 +72,10 @@ function ZillyPopUp() {
           <Image src={coin} width={30} height={30} alt="coin" />
         </div>
       </div>
-      {activeTab < 3 ? (
-        <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />
-      ) : (
-        <Utility />
-      )}
-    </div>
-  );
-}
+      {activeTab <= 2 && <Welcome activeTab={activeTab} setActiveTab={setActiveTab} />}
+      {activeTab === 3 && <Utility activeTab={activeTab} setActiveTab={setActiveTab} />}
+      {activeTab === 4 && <Quest activeTab={activeTab} setActiveTab={setActiveTab} />}
 
-function Utility({ activeTab, setActiveTab }: any) {
-  return (
-    <div className="bg-[#19173D] h-[220px] w-full absolute bottom-0 rounded-3xl">
-      <div className="flex justify-center text-center mx-4 mt-6">
-        <p className="text-3xl font-bold">Utility</p>
-      </div>
-      <motion.button
-        whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.1 }}
-        type="button"
-        className="absolute bottom-6 right-6"
-        onClick={() => console.log("hello")}
-      >
-        <Image src={nextIcon} width={40} height={40} alt="next" />
-      </motion.button>
     </div>
   );
 }
