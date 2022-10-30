@@ -51,7 +51,7 @@ function ZillyPopUp() {
   });
   const [activeTab, setActiveTab] = usePersistentState<number>(
     0,
-    `tab-zilly-widget`
+    `tabs-zilly-widget`
   );
 
   return (
