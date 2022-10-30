@@ -19,6 +19,7 @@ import HomeSmall from "./HomeSmall";
 
 export default function ZillyWidget({ children }: any) {
   const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="min-h-screen relative">
       <motion.button
@@ -26,7 +27,9 @@ export default function ZillyWidget({ children }: any) {
         whileHover={{ scale: 1.1 }}
         type="button"
         className="absolute bottom-0 right-0 mb-8 mr-6"
-        onClick={() => setOpenModal(!openModal)}
+        onClick={() => {
+          setOpenModal(!openModal);
+        }}
       >
         <Image
           src={openModal ? arrowDown : zillywidget}
@@ -245,7 +248,7 @@ function Welcome({ activeTab, setActiveTab }: any) {
               whileHover={{ scale: 1.1 }}
               type="button"
               className="absolute bottom-6 right-6"
-              onClick={() => setActiveTab(3)}
+              onClick={() => setActiveTab(5)}
             >
               <Image src={nextIcon} width={40} height={40} alt="next" />
             </motion.button>
