@@ -14,7 +14,7 @@ import ZillyWidget from "../components/ZillyWidget";
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
   [
-    infuraProvider({ apiKey: "b04b37c3dbff42c8be388b1e42f4102c" }),
+    infuraProvider({ apiKey: "TO BE UPDATED" }),
     publicProvider(),
   ]
 );
