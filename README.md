@@ -1,13 +1,9 @@
 Embeddable widget to create a Web3 membership program for your users.
 Supercharge engagement and loyalty for your brand.
 
+<img width="1378" alt="image" src="https://github.com/0xMikado/zilly-ethlisbon/assets/34025124/1e5bdd6f-6e87-4293-9543-3d55f6340149">
+
 Link to the submission: https://taikai.network/ethlisbon/hackathons/ethlisbon-2022/projects/cl9tzophr28518901vtvuvcqrt6/idea 
-
-<img width="367" alt="image" src="https://github.com/0xMikado/zilly-ethlisbon/assets/34025124/412b2107-4a04-41ef-a37f-c2e3e6146e68">
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
